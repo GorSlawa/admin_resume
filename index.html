@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вячеслав Викторович — Junior Linux System Administrator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6; color: #333; background: #fff;
+            padding: 2.5rem 1.5rem; max-width: 900px; margin: 0 auto;
+        }
+        h1 { font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem; color: #1a1a1a; }
+        h2 {
+            font-size: 1.25rem; font-weight: 600; margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem; border-bottom: 1px solid #e1e4e8; color: #1a1a1a;
+        }
+        .header { margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
+        .header-main { flex: 1; min-width: 0; }
+        .lang-switch {
+            display: flex; gap: 0.25rem; background: #f6f8fa; border: 1px solid #e1e4e8;
+            border-radius: 4px; padding: 0.25rem; font-size: 0.85rem;
+        }
+        .lang-btn {
+            background: none; border: none; padding: 0.35rem 0.75rem; cursor: pointer;
+            color: #586069; border-radius: 3px; font-weight: 500;
+        }
+        .lang-btn.active { background: #0366d6; color: #fff; }
+        .lang-btn:hover:not(.active) { background: #e1e4e8; }
+        .contact { font-size: 0.95rem; color: #586069; margin-bottom: 0.75rem; }
+        .contact a { color: #0366d6; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .location { color: #586069; margin-top: 0.5rem; }
+        section { margin-bottom: 1.5rem; }
+        p, ul { margin-bottom: 0.75rem; }
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        .skill-category { margin-bottom: 1.25rem; }
+        .skill-category h3 {
+            font-size: 0.95rem; font-weight: 600; color: #586069;
+            margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag {
+            background: #f1f8ff; border: 1px solid #c8e1ff; padding: 0.25rem 0.75rem;
+            border-radius: 3px; font-size: 0.9rem; color: #0366d6;
+        }
+        .objective { font-size: 1rem; line-height: 1.7; color: #444; }
+        .note {
+            font-size: 0.9rem; color: #586069; font-style: italic;
+            padding: 1rem; background: #f6f8fa; border-left: 3px solid #0366d6;
+            margin-top: 1rem;
+        }
+        .experience-item { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px dashed #e1e4e8; }
+        .experience-item:last-child { border-bottom: none; }
+        .experience-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .experience-item .period { font-size: 0.9rem; color: #586069; margin-bottom: 0.5rem; }
+        .orcid-link { margin-top: 1.5rem; font-size: 0.95rem; }
+        .orcid-link a { color: #0366d6; text-decoration: none; }
+        .orcid-link a:hover { text-decoration: underline; }
+        [data-lang="en"] { display: none !important; }
+        body.lang-en [data-lang="ru"] { display: none !important; }
+        body.lang-en [data-lang="en"] { display: block !important; }
+        body.lang-en .lang-btn.ru { background: none; color: #586069; }
+        body.lang-en .lang-btn.en { background: #0366d6; color: #fff; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .lang-switch { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-main">
+        <h1>Вячеслав Викторович</h1>
+        <div class="contact">
+            <a href="mailto:fuji2002@gmail.com">fuji2002@gmail.com</a> |
+            <a href="https://t.me/gorslawa">Telegram: @gorslawa</a> |
+            <a href="https://github.com/GorSlawa">GitHub: GorSlawa</a> |
+            <a href="https://orcid.org/0009-0001-9950-8482">ORCID</a>
+        </div>
+        <div class="location">Санкт-Петербург (удалённая работа)</div>
+    </div>
+    <div class="lang-switch">
+        <button class="lang-btn ru active" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn en" onclick="setLang('en')">EN</button>
+    </div>
+</div>
+
+<section>
+    <h2 data-lang="ru">Цель</h2>
+    <h2 data-lang="en">Objective</h2>
+    <p class="objective" data-lang="ru">
+        Начинающий системный администратор с практическим опытом настройки Linux-систем и автоматизации.
+        Имею опыт администрирования рабочих станций, развёртывания тестовых серверов и документирования
+        технических процессов. Ищу возможность развиваться в области Linux-инфраструктуры под руководством
+        опытной команды. Готов к интенсивному обучению и быстрому погружению в производственные задачи.
+    </p>
+    <p class="objective" data-lang="en">
+        Junior System Administrator with hands-on experience in Linux system configuration and automation.
+        Experienced in workstation administration, test server deployment, and technical documentation.
+        Seeking to grow in Linux infrastructure under mentorship of an experienced team.
+        Ready for intensive learning and fast onboarding into production tasks.
+    </p>
+</section>
+
+<section>
+    <h2 data-lang="ru">Технические навыки</h2>
+    <h2 data-lang="en">Technical Skills</h2>
+
+    <div class="skill-category">
+        <h3 data-lang="ru">Операционные системы и администрирование</h3>
+        <h3 data-lang="en">OS & System Administration</h3>
+        <div class="tags">
+            <span class="tag">Linux (Fedora/Ubuntu)</span>
+            <span class="tag">FreeBSD</span>
+            <span class="tag">Terminal</span>
+            <span class="tag">File Systems</span>
+            <span class="tag">Permissions</span>
+            <span class="tag">Process Management</span>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3 data-lang="ru">Контейнеризация и оркестрация</h3>
+        <h3 data-lang="en">Containerization & Orchestration</h3>
+        <div class="tags">
+            <span class="tag">Docker</span>
+            <span class="tag">k3s (Lightweight K8s)</span>
+            <span class="tag">Fedora CoreOS (FCOS)</span>
+            <span class="tag">Immutable/Atomic OS</span>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3 data-lang="ru">Сервисы и базы данных</h3>
+        <h3 data-lang="en">Services & Databases</h3>
+        <div class="tags">
+            <span class="tag">Nginx</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SSH</span>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3 data-lang="ru">Автоматизация и инструменты</h3>
+        <h3 data-lang="en">Automation & Tools</h3>
+        <div class="tags">
+            <span class="tag">Bash Scripting</span>
+            <span class="tag">Git</span>
+            <span class="tag">Ansible (learning)</span>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3 data-lang="ru">Сети и инфраструктура</h3>
+        <h3 data-lang="en">Networking & Infrastructure</h3>
+        <div class="tags">
+            <span class="tag">TCP/IP</span>
+            <span class="tag">DNS</span>
+            <span class="tag">HTTP/HTTPS</span>
+            <span class="tag">VPN</span>
+            <span class="tag">Server Monitoring</span>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3 data-lang="ru">Облачные технологии</h3>
+        <h3 data-lang="en">Cloud Technologies</h3>
+        <div class="tags">
+            <span class="tag">AWS (learning)</span>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 data-lang="ru">Опыт работы</h2>
+    <h2 data-lang="en">Work Experience</h2>
+
+    <div class="experience-item">
+        <h3 data-lang="ru">Администратор бизнес-процессов</h3>
+        <h3 data-lang="en">Business Process Administrator</h3>
+        <div class="period" data-lang="ru">ООО «Позитив», Санкт-Петербург | 11.2016 — 12.2019</div>
+        <div class="period" data-lang="en">LLC "Pozitiv", Saint-Petersburg | 11.2016 — 12.2019</div>
+        <ul data-lang="ru">
+            <li>Администрирование рабочих станций и периферийного оборудования</li>
+            <li>Автоматизация рутинных операций в производственном цикле</li>
+            <li>Документирование технических регламентов и инструкций</li>
+            <li>Техническая поддержка пользователей, диагностика неисправностей</li>
+        </ul>
+        <ul data-lang="en">
+            <li>Administered workstations and peripheral equipment</li>
+            <li>Automated routine operations in production workflow</li>
+            <li>Documented technical procedures and user guides</li>
+            <li>Provided user support and troubleshooting</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3 data-lang="ru">Администратор (автоматизация полиграфии)</h3>
+        <h3 data-lang="en">Administrator (Printing Automation)</h3>
+        <div class="period" data-lang="ru">ООО «Тандем», Санкт-Петербург | 08.2015 — 10.2016</div>
+        <div class="period" data-lang="en">LLC "Tandem", Saint-Petersburg | 08.2015 — 10.2016</div>
+        <ul data-lang="ru">
+            <li>Поддержка скриптов автоматизации на Python/JS</li>
+            <li>Настройка ПО для производственного оборудования</li>
+            <li>Взаимодействие с разработчиками по доработке инструментов</li>
+        </ul>
+        <ul data-lang="en">
+            <li>Maintained automation scripts in Python/JS</li>
+            <li>Configured software for production equipment</li>
+            <li>Coordinated with developers on tool improvements</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3 data-lang="ru">Специалист технической поддержки</h3>
+        <h3 data-lang="en">Technical Support Specialist</h3>
+        <div class="period" data-lang="ru">ООО «Скартел» (Yota), Санкт-Петербург | 06.2010 — 08.2012</div>
+        <div class="period" data-lang="en">LLC "Scartel" (Yota), Saint-Petersburg | 06.2010 — 08.2012</div>
+        <ul data-lang="ru">
+            <li>Диагностика сетевых подключений, работа с абонентами</li>
+            <li>Ведение тикет-системы, эскалация инцидентов</li>
+            <li>Базовое администрирование клиентского оборудования</li>
+        </ul>
+        <ul data-lang="en">
+            <li>Diagnosed network connections, supported end users</li>
+            <li>Managed ticketing system, escalated incidents</li>
+            <li>Basic administration of customer premises equipment</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3 data-lang="ru">Сервис-инженер</h3>
+        <h3 data-lang="en">Service Engineer</h3>
+        <div class="period" data-lang="ru">ЗАО «Мирос» / Техком, Санкт-Петербург | 2000 — 2006</div>
+        <div class="period" data-lang="en">ZAO "Miros" / Tehkom, Saint-Petersburg | 2000 — 2006</div>
+        <ul data-lang="ru">
+            <li>Техническое обслуживание и ремонт офисного оборудования</li>
+            <li>Диагностика аппаратных неисправностей, замена компонентов</li>
+            <li>Работа с технической документацией на английском языке</li>
+        </ul>
+        <ul data-lang="en">
+            <li>Maintenance and repair of office equipment</li>
+            <li>Hardware diagnostics, component replacement</li>
+            <li>Worked with English-language technical documentation</li>
+        </ul>
+    </div>
+
+    <div class="orcid-link">
+        <span data-lang="ru"><strong>Полная история трудоустройства:</strong> <a href="https://orcid.org/0009-0001-9950-8482" target="_blank" rel="noopener">ORCID профиль</a></span>
+        <span data-lang="en"><strong>Full employment history:</strong> <a href="https://orcid.org/0009-0001-9950-8482" target="_blank" rel="noopener">ORCID profile</a></span>
+    </div>
+</section>
+
+<section>
+    <h2 data-lang="ru">Образование и развитие</h2>
+    <h2 data-lang="en">Education & Development</h2>
+    <p data-lang="ru">
+        Активно изучаю системное администрирование, информационную безопасность и системы мониторинга.
+        Работаю над углублением знаний в области Ansible, AWS и управления инфраструктурой.
+    </p>
+    <p data-lang="en">
+        Actively studying system administration, information security, and monitoring systems.
+        Expanding knowledge in Ansible, AWS, and infrastructure management.
+    </p>
+    <p data-lang="ru"><strong>Английский:</strong> чтение технической документации (уровень A2).</p>
+    <p data-lang="en"><strong>English:</strong> reading technical documentation (level A2).</p>
+</section>
+
+<section>
+    <h2 data-lang="ru">Дополнительная информация</h2>
+    <h2 data-lang="en">Additional Information</h2>
+    <div class="note" data-lang="ru">
+        Не имею коммерческого опыта 3–6 лет, указанного в требованиях вакансии, но обладаю практическими
+        навыками администрирования Linux-систем, понимаю принципы работы инфраструктуры и готов компенсировать
+        недостаток опыта высокой мотивацией, быстрой обучаемостью и ответственным подходом к задачам.
+        Рассматриваю позицию как возможность для профессионального роста под руководством наставника.
+    </div>
+    <div class="note" data-lang="en">
+        I don't have the 3–6 years of commercial experience listed in the job requirements, but I possess
+        practical Linux administration skills, understand infrastructure principles, and am ready to compensate
+        for limited experience with high motivation, fast learning, and a responsible approach to tasks.
+        I view this role as an opportunity for professional growth under mentorship.
+    </div>
+</section>
+
+<script>
+    function setLang(lang) {
+        document.body.className = lang === 'en' ? 'lang-en' : '';
+        localStorage.setItem('cv-lang', lang);
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`.lang-btn.${lang}`).classList.add('active');
+    }
+    const saved = localStorage.getItem('cv-lang');
+    const browserLang = navigator.language.slice(0, 2);
+    if (saved) {
+        setLang(saved);
+    } else if (browserLang === 'en') {
+        setLang('en');
+    }
+</script>
+</body>
+</html>
