@@ -51,9 +51,45 @@
         .experience-item:last-child { border-bottom: none; }
         .experience-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
         .experience-item .period { font-size: 0.9rem; color: #586069; margin-bottom: 0.5rem; }
-        .orcid-link { margin-top: 1.5rem; font-size: 0.95rem; }
-        .orcid-link a { color: #0366d6; text-decoration: none; }
-        .orcid-link a:hover { text-decoration: underline; }
+        .orcid-link {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .orcid-link a {
+            color: #0366d6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .orcid-link a:hover {
+            text-decoration: underline;
+        }
+        .orcid-qr {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: #fff;
+            border: 2px solid #e1e4e8;
+            border-radius: 6px;
+            transition: all 0.2s;
+            padding: 4px;
+        }
+        .orcid-qr:hover {
+            border-color: #0366d6;
+            transform: scale(1.05);
+        }
+        .orcid-qr img {
+            width: 56px;
+            height: 56px;
+            display: block;
+        }
         [data-lang="en"] { display: none !important; }
         body.lang-en [data-lang="ru"] { display: none !important; }
         body.lang-en [data-lang="en"] { display: block !important; }
@@ -61,7 +97,7 @@
         body.lang-en .lang-btn.en { background: #0366d6; color: #fff; }
         @media print {
             body { padding: 0; max-width: none; }
-            .lang-switch { display: none; }
+            .lang-switch, .orcid-qr { display: none; }
         }
     </style>
 </head>
@@ -144,7 +180,7 @@
         <div class="tags">
             <span class="tag">Bash Scripting</span>
             <span class="tag">Git</span>
-            <span class="tag">Ansible (learning)</span>
+            <span class="tag">Ansible</span>
         </div>
     </div>
 
@@ -269,8 +305,23 @@
     </div>
 
     <div class="orcid-link">
-        <span data-lang="ru"><strong>Полная история трудоустройства:</strong> <a href="https://orcid.org/0009-0001-9950-8482" target="_blank" rel="noopener">ORCID профиль</a></span>
-        <span data-lang="en"><strong>Full employment history:</strong> <a href="https://orcid.org/0009-0001-9950-8482" target="_blank" rel="noopener">ORCID profile</a></span>
+      <span style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <span>
+          <span data-lang="ru"><strong>Полная история трудоустройства:</strong></span>
+          <span data-lang="en"><strong>Full employment history:</strong></span>
+          <a href="https://orcid.org/0009-0001-9950-8482" target="_blank" rel="noopener noreferrer"
+             style="margin-left: 0.25rem;">
+            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                 alt="ORCID" style="width: 16px; height: 16px; vertical-align: middle;">
+            <span>orcid.org/0009-0001-9950-8482</span>
+          </a>
+        </span>
+        <a href="https://orcid.org/0009-0001-9950-8482" target="_blank" rel="noopener noreferrer"
+           class="orcid-qr"
+           title="ORCID профиль">
+          <img src="orcid-qr.png" alt="ORCID QR Code" style="width: 128px; height: 128px; vertical-align: middle;">
+        </a>
+      </span>
     </div>
 </section>
 
